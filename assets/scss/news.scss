@@ -1,0 +1,26 @@
+.news{
+  background: #404040;
+  height: auto;
+  overflow-x: hidden;
+  padding-top: 50px;
+  top: 0;
+
+  .close-character{
+    color: #ffffff;
+  }
+
+  .card{
+    background: #545454;
+    color: #ffffff;
+    border: 1px solid #2a2a2a;
+    min-height: 350px;
+
+
+    .btn.btn-primary{
+      background: #404040;
+      border: 0;
+      position: absolute;
+      bottom: 15px;
+    }
+  }
+}

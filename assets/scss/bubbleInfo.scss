@@ -1,0 +1,31 @@
+.bubble-info {
+  display: none;
+  position: fixed;
+  background: #404040;
+  color: #ffffff;
+
+  padding: 20px;
+  transform: translate(-40%, -105%);
+  width: 300px;
+  z-index: 9999;
+
+  strong{
+    text-transform: capitalize;
+    display: block;
+  }
+
+  &--image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-bis{
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

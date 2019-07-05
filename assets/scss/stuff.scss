@@ -1,0 +1,26 @@
+.stuff{
+  &__info{
+    position: relative;
+    margin-bottom: 25px;
+
+    &--image{
+      display: inline-block;
+      width: 30px;
+    }
+
+    &--title{
+      padding: 0 5px;
+    }
+  }
+
+  &__content{
+    margin-right: 15px;
+
+    &:hover{
+      .bubble-info{
+        display: block;
+      }
+    }
+  }
+
+}

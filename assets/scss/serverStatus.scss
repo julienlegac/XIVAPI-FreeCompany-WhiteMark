@@ -1,0 +1,39 @@
+.server-status{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: #404040;
+  padding-top: 50px;
+
+  &__watch{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+
+    &.online{
+      background: #81a800;
+    }
+
+    &.offline{
+      background: #dc0800;
+    }
+  }
+
+  &__item{
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  .close-character{
+    color: #ffffff;
+  }
+
+  .title{
+
+    color: #ffffff;
+    font-weight: 600;
+  }
+}

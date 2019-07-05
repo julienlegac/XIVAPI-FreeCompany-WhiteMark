@@ -1,0 +1,74 @@
+const axios = require('axios')
+
+module.exports = {
+    head: {
+        script: [
+            {src: 'https://www.googletagmanager.com/gtag/js?id=YOUR ANALYTICS CODE HERE'},
+        ]
+    },
+
+    modules: [
+        ['nuxt-env', {
+            keys: [
+                { key: 'FREECOMPANY_ID', default: 'FREECOMPANY ID HERE' },
+                { key: 'API_KEY', default: 'YOUR API KEY HERE' },
+            ]
+        }],
+
+        'bootstrap-vue/nuxt',
+        '@nuxtjs/robots',
+        '@nuxtjs/sitemap',
+
+        ['@nuxtjs/robots', {
+            UserAgent: 'Googlebot',
+            Disallow: '/',
+            Sitemap: 'http://www.laconfreriedumog.fr/sitemap.xml'
+        }]
+    ],
+
+    sitemap: {
+        hostname: 'http://www.laconfreriedumog.fr',
+        gzip: true,
+        exclude: [
+            '/character/'
+        ]
+    },
+
+    loading: '~/components/Loading.vue',
+    //loading: { color: '#ffffff' },
+
+    generate: {
+        routes: function (callback) {
+            axios.get('https://xivapi.com/FreeCompany/' + this.$env.FREECOMPANY_ID + '?data=FCM&private_key=' + this.$env.API_KEY)
+                .then((res) => {
+
+                    let character = res.data.FreeCompanyMembers
+
+                    const routes = character.map((user) => {
+                        return '/character/' + user.ID
+                    })
+                    callback(null, routes)
+                })
+                .catch(callback)
+        }
+    },
+
+    /*
+    ** Build configuration
+    */
+    build: {
+        /*
+        ** Run ESLint on save
+        */
+        extend (config, { isDev, isClient }) {
+            if (isDev && isClient) {
+                config.module.rules.push({
+                    enforce: 'pre',
+                    test: /\.(js|vue)$/,
+                    loader: 'eslint-loader',
+                    exclude: /(node_modules)/
+                })
+            }
+        }
+    },
+}

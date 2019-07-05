@@ -1,0 +1,31 @@
+body{
+  background: #404040!important;
+}
+
+#app{
+  width: 100vw!important;
+  height: 100vh!important;
+  margin: 0!important;
+}
+
+.lowercase{
+  text-transform: lowercase;
+}
+
+.align-item-center{
+  align-items: center;
+}
+
+.card-body{
+  position: relative;
+}
+
+a{
+  color: #ffffff!important;
+  text-decoration: none!important;
+
+  &:hover{
+    color: #ffffff!important;
+    text-decoration: none!important;
+  }
+}

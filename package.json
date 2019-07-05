@@ -1,0 +1,66 @@
+{
+  "name": "xiv-fcsite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "@nuxtjs/moment": "^1.2.0",
+    "@nuxtjs/robots": "^2.2.0",
+    "axios": "^0.18.1",
+    "axios-cache-adapter": "^2.3.0",
+    "axios-cache-plugin": "^0.1.0",
+    "axios-rate-limit": "0.0.3",
+    "bootstrap-vue": "^2.0.0-rc.24",
+    "core-js": "^2.6.5",
+    "jquery": "^3.4.1",
+    "npm": "^6.10.0",
+    "nuxt": "^2.6.3",
+    "nuxt-env": "^0.1.0",
+    "popper.js": "^1.15.0",
+    "vue": "^2.6.10",
+    "vue-moment": "^4.0.0",
+    "vue-router": "^3.0.6",
+    "vue-slick": "^1.1.15",
+    "xivapi-js": "^0.2.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

@@ -1,0 +1,33 @@
+.ranking{
+  padding-top: 50px;
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  background: #404040;
+  color: #ffffff;
+
+  top: 0;
+  left: 0;
+
+  &__item{
+
+    &--avatar{
+      display: inline-block;
+      align-items: center;
+    }
+
+    &--text{
+      display: inline-block;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  .border{
+    border-bottom: 1px solid #ffffff;
+    display: block;
+    width: 25px;
+    margin: 0 auto 25px auto;
+    display: block;
+  }
+}

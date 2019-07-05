@@ -1,0 +1,48 @@
+.list-members{
+  width: 100%;
+  background: #404040;
+
+  &.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item{
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+
+    &--link{
+      color: #000;
+      &:hover{
+        text-decoration: none;
+        color: #000;
+      }
+    }
+
+    &--photo{
+      width: 100%;
+      padding-bottom: 100%;
+      display: block;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+
+      @media screen and (max-width: 1024px) {
+        max-width: 70%;
+        padding-bottom: 70%;
+        margin: 0 auto 20px auto;
+      }
+
+      @media screen and (max-width: 576px) {
+        max-width: 35%;
+        padding-bottom: 35%;
+      }
+    }
+
+    p{
+      margin-bottom: 5px;
+    }
+  }
+}
