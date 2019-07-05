@@ -11,7 +11,6 @@ module.exports = {
 
         'bootstrap-vue/nuxt',
         '@nuxtjs/robots',
-        '@nuxtjs/sitemap',
 
         ['@nuxtjs/robots', {
             UserAgent: 'Googlebot',
